@@ -1,0 +1,43 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Items ({{incompleteCount}})</h1>
+      <!-- step 7: add -->
+      <label class="hide-completed">
+        <input type="checkbox" />
+        Hide Completed Tasks
+      </label>
+      <!-- step 8 -->
+      {{> loginButtons}}
+
+      <!-- step 4: add -->
+      <!-- <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form> -->
+       {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
+    </header>
+    <div class="main_page">
+      {{> main_left}}
+      <!-- {{> mainpage}} -->
+      <div class="main_content_right">
+        {{#each tasks}}
+          {{> task}}
+        {{/each}}
+        <!-- {{> main_right}} -->
+      </div>
+    </div>
+    <ul>
+      
+    </ul>
+  </div>
+  <div id="wrapper">test</div>
+</body>
+ <!-- step 5: delete -->
+<!-- <template name="task">
+  <li>{{text}}</li>
+
+</template> -->

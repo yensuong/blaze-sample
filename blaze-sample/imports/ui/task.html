@@ -1,0 +1,16 @@
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+ 
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+	<div class="task_info">
+	 	<span class="text"><strong>{{username}} - </strong>{{text}}</span>
+	 	<button class="btn_edit" edit>Edit</button>
+	</div>
+    <!-- <span class="text">{{text}}</span> -->
+    <form class="formedit">
+	    <input type="text" class="name_{{_id}}" value="{{text}}">
+	    <button class="btn_save" save>Save</button>
+	</form>
+  </li>
+</template>
